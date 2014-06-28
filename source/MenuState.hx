@@ -12,11 +12,13 @@ import flixel.util.FlxMath;
  */
 class MenuState extends FlxState
 {
+	private var test:Int = 0;
 	/**
 	 * Function that is called up when to state is created to set it up. 
 	 */
 	override public function create():Void
 	{
+		add(new FlxText(0, 1, 100, "Yo nigga"));
 		super.create();
 	}
 	
@@ -34,6 +36,8 @@ class MenuState extends FlxState
 	 */
 	override public function update():Void
 	{
+		test++;
+		add(new FlxText(0, 1 + test * 20, 100, "Yo nigga"));
 		super.update();
 	}	
 }
